@@ -14,15 +14,23 @@ public class User {
     // @Column(name="user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name="name")
+    @Column(name="profile_id")
+    private Integer profile_id;
+    @Column(name="user_name")
     private String username;
-    @Column(name="pwd")
+    @Column(name="password")
     private String userpwd;
     public long getId() {
         return id;
     }
     public void setId(long id) {
         this.id = id;
+    }
+    public Integer getProfile_id() {
+        return profile_id;
+    }
+    public void setProfile_id(Integer profile_id) {
+        this.profile_id = profile_id;
     }
     public String getUsername() {
         return username;
@@ -36,5 +44,6 @@ public class User {
     public void setUserpwd(String userpwd) {
         this.userpwd = userpwd;
     }
+    
 
     }
